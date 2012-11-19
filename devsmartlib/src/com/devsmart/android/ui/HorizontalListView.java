@@ -315,6 +315,7 @@ public class HorizontalListView extends AdapterView<ListAdapter> {
 
 		@Override
 		public boolean onDown(MotionEvent e) {
+			getParent().requestDisallowInterceptTouchEvent(true);
 			return HorizontalListView.this.onDown(e);
 		}
 
